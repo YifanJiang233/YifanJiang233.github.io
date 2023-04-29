@@ -1,10 +1,10 @@
-"PUQR":
-  url: https://www.aimsciences.org/journal/2095-9672
-  color: "#00369f"
+# "PUQR":
+#   url: https://www.aimsciences.org/journal/2095-9672
+#   color: "#00369f"
 
-"JDDE":
-  url: https://www.springer.com/journal/10884
-  color: "#00369f"
+# "JDDE":
+#   url: https://www.springer.com/journal/10884
+#   color: "#00369f"
 
 "arXiv":
   color: "#A42C25"
