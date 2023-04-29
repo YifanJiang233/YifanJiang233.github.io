@@ -1,0 +1,97 @@
+.thm {
+    display: block;
+    font-style: italic;
+    background-color: var(--global-code-bg-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 12px 0;
+    }
+.thm:before {
+    content: "Theorem. ";
+    font-weight: bold;
+    font-style: normal;
+    }
+.thm[text]:before {
+    content: "Theorem (" attr(text) ") ";
+    }
+
+.cor {
+    display: block;
+    font-style: italic;
+    background-color: var(--global-code-bg-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 12px 0;
+    }
+.cor:before {
+    content: "Corollary. ";
+    font-weight: bold;
+    font-style: normal;
+    }
+.cor[text]:before {
+    content: "Corollary (" attr(text) ") ";
+    }
+
+.lem {
+    display: block;
+    font-style: italic;
+    background-color: var(--global-code-bg-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 12px 0;
+}
+.lem:before {
+    content: "Lemma.";
+    font-weight: bold;
+    font-style: normal;
+}
+.lem[text]:before {
+    content: "Lemma (" attr(text) ") ";
+}
+
+.prop {
+    display: block;
+    font-style: italic;
+    background-color: var(--global-code-bg-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 12px 0;
+}
+.prop:before {
+    content: "Proposition.";
+    font-weight: bold;
+    font-style: normal;
+}
+.prop[text]:before {
+    content: "Proposition (" attr(text) ") ";
+}
+
+.proof {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.proof:before {
+    content: "Proof.";
+    font-style: italic;
+}
+.proof:after {
+    content: "\25FB";
+    float:right;
+}
+.asmp {
+    display: block;
+    font-style: normal;
+    background-color: var(--global-code-bg-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 12px 0;
+}
+.asmp:before {
+    content: "Assumption.";
+    font-weight: bold;
+    font-style: normal;
+}
+.asmp[text]:before {
+    content: "Assumption (" attr(text) ") ";
+}

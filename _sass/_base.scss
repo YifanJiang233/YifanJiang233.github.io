@@ -830,8 +830,16 @@ pre {
     background-color: transparent;
     border-radius: 0;
     margin-bottom: 0;
+    border-style: none;
     padding: 0;
   }
+}
+
+code {
+  color: var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 3px;
+  padding: 3px 3px;
 }
 
 
