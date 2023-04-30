@@ -118,6 +118,10 @@ permalink: /blog/:year/:title/
 pagination:
   enabled: true
 
+related_blog_posts:
+  enabled: false
+  max_related: 5
+
 # Comments
 disqus_shortname: Yifan # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -231,7 +235,6 @@ jekyll-archives:
     category: '/blog/category/:name/'
 
 # display_tags: ['OptimalTransport','DRO','ConservationLaw'] # this tags will be dispalyed on the front page of your blog
-display_tages: 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------

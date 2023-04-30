@@ -850,20 +850,21 @@ code {
     border-color: var(--global-theme-color);
     border-radius: 6px;
     border-style: none;
-    color: var(--global-text-color);
+    color: var(--global-hover-color);
     font-size: medium;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: monospace;
     opacity: 0;
     position: absolute;
     right: .15rem;
     top: .12rem;
   }
-  &:active .copy,
-  &:focus .copy,
   &:hover .copy {
     color: var(--global-hover-color);
     background: var(--global-bg-color);
     opacity: 0.6;
+    &:hover {
+      opacity: 1;    
+    }
   }
 }
 

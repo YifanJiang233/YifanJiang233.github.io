@@ -12,5 +12,5 @@ window.MathJax = {
     svg: {
         fontCache: 'global'
     },
- 
+    // output: {font: 'mathjax-modern'}
 }
