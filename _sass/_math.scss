@@ -7,13 +7,13 @@
     max-width: 100%;
 }
 
-// fix corrupted rendering on ios
-mjx-container, mjx-container *, mjx-container *::before, mjx-container *::after {
-    box-sizing: unset; /* or any value, really */
-}
-mjx-c::before {
-    will-change: opacity;
-}
+// fix corrupted rendering on ios (only needed for mathjax v3)
+// mjx-container, mjx-container *, mjx-container *::before, mjx-container *::after {
+//     box-sizing: unset; /* or any value, really */
+// }
+// mjx-c::before {
+//     will-change: opacity;
+// }
 
 .thm {
     display: block;
