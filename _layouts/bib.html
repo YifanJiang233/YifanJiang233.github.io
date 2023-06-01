@@ -133,12 +133,6 @@
           {{ entry.note | strip }}
         </div>
 
-        <!-- Awards -->
-        {%- if entry.award -%}
-        {%- capture award -%}{{ " " }} {{entry.award}} {%- endcapture -%}
-        <span style="color: purple">&#x1F3C6; {{ award }}</span>
-        {%- endif -%}
-
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.abstract %}
