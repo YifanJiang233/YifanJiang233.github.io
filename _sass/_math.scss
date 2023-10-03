@@ -112,3 +112,19 @@
 .asmp[text]:before {
     content: "Assumption (" attr(text) ") ";
 }
+.defn {
+    display: block;
+    font-style: normal;
+    background-color: var(--global-code-bg-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 12px 0;
+}
+.defn:before {
+    content: "Definition";
+    font-weight: bold;
+    font-style: normal;
+}
+.defn[text]:before {
+    content: "Definition (" attr(text) ") ";
+}

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <!-- _layouts/distill.html -->
+{%- assign year = page.date | date: "%Y" -%}
+{%- assign tags = page.tags | join: "" -%}
+{%- assign categories = page.categories | join: "" -%}
 <html>
   <head>
     {%- include head.html %}
@@ -64,10 +67,30 @@
 
       <d-title>
         <h1>{{ page.title }}</h1>
-        <p>{{ page.description }}</p>
+        <!-- <p>{{ page.description }}</p> -->
+        <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{%- if page.author -%} • {{ page.author }}{%- endif -%}{%- if page.meta -%} • {{ page.meta }}{%- endif -%}</p>
+        <p class="post-tags">
+          <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fas fa-calendar fa-sm"></i> {{ year }} </a>
+          {%- if tags != "" %}
+          &nbsp; &middot; &nbsp;
+            {% for tag in page.tags -%}
+            <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
+              <i class="fas fa-hashtag fa-sm"></i> {{ tag }}</a> &nbsp;
+              {% endfor -%}
+          {% endif %}
+    
+          {%- if categories != "" %}
+          &nbsp; &middot; &nbsp;
+            {% for category in page.categories -%}
+            <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
+              <i class="fas fa-tag fa-sm"></i> {{ category }}</a> &nbsp;
+              {% endfor -%}
+          {% endif %}
+    
+        </p>
       </d-title>
 
-      <d-byline></d-byline>
+      <!-- <d-byline></d-byline> -->
 
       <d-article>
         {% if page.toc -%}
