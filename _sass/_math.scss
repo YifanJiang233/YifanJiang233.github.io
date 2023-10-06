@@ -17,7 +17,7 @@
 
 .thm {
     display: block;
-    font-style: italic;
+    font-style: normal;
     background-color: var(--global-code-bg-color);
     border-radius: 6px;
     padding: 6px 12px;
@@ -25,7 +25,7 @@
     }
 .thm:before {
     content: "Theorem. ";
-    font-weight: bold;
+    font-weight: 400;
     font-style: normal;
     }
 .thm[text]:before {
@@ -34,7 +34,7 @@
 
 .cor {
     display: block;
-    font-style: italic;
+    font-style: normal;
     background-color: var(--global-code-bg-color);
     border-radius: 6px;
     padding: 6px 12px;
@@ -42,7 +42,7 @@
     }
 .cor:before {
     content: "Corollary. ";
-    font-weight: bold;
+    font-weight: 400;
     font-style: normal;
     }
 .cor[text]:before {
@@ -51,7 +51,7 @@
 
 .lem {
     display: block;
-    font-style: italic;
+    font-style: normal;
     background-color: var(--global-code-bg-color);
     border-radius: 6px;
     padding: 6px 12px;
@@ -59,7 +59,7 @@
 }
 .lem:before {
     content: "Lemma.";
-    font-weight: bold;
+    font-weight: 400;
     font-style: normal;
 }
 .lem[text]:before {
@@ -68,7 +68,7 @@
 
 .prop {
     display: block;
-    font-style: italic;
+    font-style: normal;
     background-color: var(--global-code-bg-color);
     border-radius: 6px;
     padding: 6px 12px;
@@ -76,7 +76,7 @@
 }
 .prop:before {
     content: "Proposition.";
-    font-weight: bold;
+    font-weight: 400;
     font-style: normal;
 }
 .prop[text]:before {
@@ -106,7 +106,7 @@
 }
 .asmp:before {
     content: "Assumption.";
-    font-weight: bold;
+    font-weight: 400;
     font-style: normal;
 }
 .asmp[text]:before {
@@ -121,10 +121,24 @@
     margin: 12px 0;
 }
 .defn:before {
-    content: "Definition";
-    font-weight: bold;
+    content: "Definition.";
+    font-weight: 400;
     font-style: normal;
 }
 .defn[text]:before {
     content: "Definition (" attr(text) ") ";
+}
+.box {
+    display: block;
+    font-style: normal;
+    border: solid 2px var(--global-text-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin: 12px 0;
+    text-align: justify;
+}
+.box[text]:before {
+    content: attr(text);
+    font-weight: 400;
+    font-style: normal;
 }

@@ -2,11 +2,11 @@
 layout: post
 title: Remote Server Cheatsheet
 date: 2023-04-20 
-description: Cheatsheet of jupyter, tmux, etc.
+description: Cheatsheet of Jupyter, tmux, etc.
 tags: ['python', 'tmux']
 categories: codes
-toc:
-    sidebar: left
+# toc:
+#     sidebar: left
 ---
 
 ## Jupyter Notebook
@@ -17,7 +17,7 @@ toc:
    ssh username@server
    ```
 
-2. Create a remote jupyter notebook on the server.
+2. Create a remote Jupyter notebook on the server.
 
    ```shell
    jupyter notebook --no-browser --port=8080
@@ -31,7 +31,7 @@ toc:
     }
    ```
 
-3. Open a new local terminal and connect to the remote jupyter notebook
+3. Open a new local terminal and connect to the remote Jupyter notebook
 
    ```shell
    ssh -L 8080:localhost:8080 username@server
