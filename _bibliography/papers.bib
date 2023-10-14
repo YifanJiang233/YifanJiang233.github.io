@@ -1,7 +1,24 @@
 ---
 ---
+
+@inproceedings{BHJO23Wasserstein,
+  title       = {Wasserstein Distributional Robustness of Neural Networks},
+  author      = {Bai, Xingjian and He, Guangyi and Jiang, Yifan and Obłój, Jan},
+  year        = {2023},
+  month       = dec,
+  booktitle   = {Advances in Neural Information Processing Systems},
+  publisher   = {Curran Associates, Inc.},
+  abstract    = {Deep neural networks are known to be vulnerable to adversarial attacks (AA). For an image recognition task, this means that a small perturbation of the original can result in the image being misclassified. Design of such attacks as well as methods of adversarial training against them are subject of intense research. We re-cast the problem using techniques of Wasserstein distributionally robust optimization (DRO) and obtain novel contributions leveraging recent insights from DRO sensitivity analysis. We consider a set of distributional threat models. Unlike the traditional pointwise attacks, which assume a uniform bound on perturbation of each input data point, distributional threat models allow attackers to perturb inputs in a non-uniform way. We link these more general attacks with questions of out-of-sample performance and Knightian uncertainty. To evaluate the distributional robustness of neural networks, we propose a first-order AA algorithm and its multistep version. Our attack algorithms include Fast Gradient Sign Method (FGSM) and Projected Gradient Descent (PGD) as special cases. Furthermore, we provide a new asymptotic estimate of the adversarial accuracy against distributional threat models. The bound is fast to compute and first-order accurate, offering new insights even for the pointwise AA. It also naturally yields out-of-sample performance guarantees. We conduct numerical experiments on CIFAR-10, CIFAR-100, ImageNet datasets using DNNs on RobustBench to illustrate our theoretical results. Our code is available at <a href="https://github.com/JanObloj/W-DRO-Adversarial-Methods"> here</a>.},
+  abbr        = {NeurIPS},
+  selected    = {true},
+  bibtex_show = {true},
+  arxiv       = {2306.09844},
+  code        = {https://github.com/JanObloj/W-DRO-Adversarial-Methods}
+}
+
+
 @article{DJL23Empirical,
-  title       = {Empirical approximation to invariant measures for {McKean--Vlasov} processes: Mean-field interaction vs self-interaction},
+  title       = {Empirical Approximation to Invariant Measures for {McKean--Vlasov} Processes: Mean-field Interaction vs Self-interaction},
   author      = {Du, Kai and Jiang, Yifan and Li, Jinfeng},
   year        = {2023},
   month       = aug,
@@ -44,7 +61,6 @@
   issn        = {1572-9222},
   doi         = {10.1007/s10884-022-10158-x},
   abstract    = {According to the recurrent frequency, many levels of recurrent points are found such as periodic points, almost periodic points, weakly almost periodic points, quasi-weakly almost periodic points and Banach recurrent points. In this paper, we consider symbolic dynamics and show the existence of six refined levels between Banach recurrence and general recurrence. Despite the fact that these refined levels are all null-measure under any invariant measure, we further show they carry strong topological complexity. Each refined level of recurrent points is dense in the whole space and contains an uncountable distributionally chaotic subset. For a wide range of dynamical systems such as expansive systems with the shadowing property, we also show the distributional chaos of the points that are recurrent but not Banach recurrent.},
-  selected    = {true},
   abbr        = {JDDE},
   bibtex_show = {true},
   arxiv       = {1911.01564}
@@ -61,20 +77,5 @@
   abbr        = {arXiv},
   bibtex_show = {true},
   arxiv       = {2301.09913}
-}
-
-
-@misc{BHJO23Wasserstein,
-  title       = {Wasserstein Distributional Robustness of Neural Networks},
-  author      = {Bai, Xingjian and He, Guangyi and Jiang, Yifan and Obłój, Jan},
-  year        = {2023},
-  month       = jun,
-  number      = {arXiv:2306.09844},
-  eprint      = {2306.09844},
-  publisher   = {{arXiv}},
-  abstract    = {Deep neural networks are known to be vulnerable to adversarial attacks (AA). For an image recognition task, this means that a small perturbation of the original can result in the image being misclassified. Design of such attacks as well as methods of adversarial training against them are subject of intense research. We re-cast the problem using techniques of Wasserstein distributionally robust optimization (DRO) and obtain novel contributions leveraging recent insights from DRO sensitivity analysis. We consider a set of distributional threat models. Unlike the traditional pointwise attacks, which assume a uniform bound on perturbation of each input data point, distributional threat models allow attackers to perturb inputs in a non-uniform way. We link these more general attacks with questions of out-of-sample performance and Knightian uncertainty. To evaluate the distributional robustness of neural networks, we propose a first-order AA algorithm and its multi-step version. Our attack algorithms include Fast Gradient Sign Method (FGSM) and Projected Gradient Descent (PGD) as special cases. Furthermore, we provide a new asymptotic estimate of the adversarial accuracy against distributional threat models. The bound is fast to compute and first-order accurate, offering new insights even for the pointwise AA. It also naturally yields out-of-sample performance guarantees. We conduct numerical experiments on the CIFAR-10 dataset using DNNs on RobustBench to illustrate our theoretical results. Our code is available at <a href="https://github.com/JanObloj/W-DRO-Adversarial-Methods"> here</a>.},
-  abbr        = {arXiv},
-  bibtex_show = {true},
-  arxiv       = {2306.09844}
 }
 
