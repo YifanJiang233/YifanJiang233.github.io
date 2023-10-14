@@ -24,10 +24,12 @@ hr {
 }
 
 table {
+  border-radius: 6px;
 
   td,
   th {
     font-size: 1rem;
+    color: var(--global-text-color);
   }
 
   th {
@@ -46,6 +48,13 @@ table.table a {
 
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
+  }
+}
+
+.table-dark {
+  background-color: transparent;
+  &.table-bordered{
+    border: 1px solid var(--global-divider-color) !important;
   }
 }
 

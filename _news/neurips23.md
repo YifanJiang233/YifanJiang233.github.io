@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our [paper](https://arxiv.org/abs/2306.09844) has been recently accepted for NeurIPS 2023! 🎉🎉🎉
+Our [paper](https://arxiv.org/abs/2306.09844) has been recently accepted for NeurIPS 2023 🎉🎉🎉
