@@ -2,6 +2,7 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
+        {%- if site.enable_publication_thumbnails -%}
         <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
@@ -11,6 +12,7 @@
             {% include figure.html
             path=entry_path
             class="preview z-depth-1 rounded"
+            zoomable=false
             alt=entry.preview -%}
           {%- endif -%}
         {%- elsif entry.abbr -%}
@@ -19,16 +21,16 @@
             {%- if site.data.venues[entry.abbr].color != blank -%}
               {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
             {%- endif -%}
-            <!-- <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr> -->
-            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>{{entry.abbr}}</abbr>
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
           {%- else -%}
             <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
         {%- endif -%}
         </div>
+        {%- endif -%}
 
         <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="col-sm-8">
+        <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
         <!-- Title -->
         <div class="title">{{entry.title}}</div>
         <!-- Author -->
@@ -36,12 +38,9 @@
         {% assign author_array_size = entry.author_array | size %}
 
         {% assign author_array_limit = author_array_size %}
-
-        <!-- {%- if site.max_author_limit and author_array_size > site.max_author_limit %}
+        {%- if site.max_author_limit and author_array_size > site.max_author_limit %}
           {% assign author_array_limit = site.max_author_limit %}
-        {% endif %} -->
-
-        {% assign author_array_limit = author_array_size %}
+        {% endif %}
 
         {%- for author in entry.author_array limit: author_array_limit -%}
           {%- assign author_is_self = false -%}
@@ -137,12 +136,6 @@
           {{ entry.note | strip }}
         </div>
 
-        <!-- Awards -->
-        {%- if entry.award -%}
-        {%- capture award -%}{{ " " }} {{entry.award}} {%- endcapture -%}
-        <span style="color: purple">&#x1F3C6; {{ award }}</span>
-        {%- endif -%}
-
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.abstract %}
@@ -195,9 +188,12 @@
             <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
           {%- endif %}
           </div>
-          {% if site.badges %}
+          {% if site.enable_publication_badges %}
+          {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
+          {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
+          {% if entry_has_altmetric_badge or entry_has_dimensions_badge %}
           <div class="badges">
-            {%- if site.badges.altmetric_badge %}
+            {%- if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"
               {% if entry.eprint %}
                 data-arxiv-id="{{ entry.eprint }}"
@@ -212,7 +208,7 @@
               {% endif %}
               ></span>
             {%- endif %}
-            {%- if site.badges.dimensions_badge %}
+            {%- if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
               <span class="__dimensions_badge_embed__"
               {% if entry.doi %}
                 data-doi="{{ entry.doi }}"
@@ -224,6 +220,7 @@
               data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
             {%- endif %}
           </div>
+          {%- endif %}
           {%- endif %}
 
           {% if entry.abstract -%}
