@@ -167,7 +167,7 @@ $$
 $$
 
 where we write $$z=(z_{1},\dots,z_{m})=f_{\theta}(x)$$ for the output of a neural network, and $$z_{(1)}\geq\dots\geq z_{(m)}$$ are the order statistics of $$z$$.
-However, under \emph{distributional} threat models, intuitively, an effective attack should perturb more aggressively images classified far from the decision boundary and leave the misclassified images unchanged. 
+However, under *distributional* threat models, intuitively, an effective attack should perturb more aggressively images classified far from the decision boundary and leave the misclassified images unchanged. 
 Consequently, neither CE loss nor DLR loss are appropriate.
 Instead, we propose to use Rectified DLR (ReDLR) loss as a candidate to employ *distributional* adversarial attacks, which is simply given by 
 
