@@ -40,7 +40,7 @@
   {% endif %}
   <ol style="list-style-type: none; padding: 0;">
   {% for item in news limit: news_limit %}
-  <li>
+  <li style="margin-top: 1rem;">
     <div class="row">
       <div class="col-sm-2" style="font-weight: bolder;">
         {{ item.date | date: "%b %-d, %Y" }}
