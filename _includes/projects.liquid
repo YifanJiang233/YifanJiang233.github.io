@@ -1,4 +1,4 @@
-<!-- _includes/projects.html -->
+<!-- _includes/projects.liquid -->
 <div class="grid-sizer"></div>
 <div class="grid-item">
   {% if project.redirect -%}
@@ -8,7 +8,7 @@
       {%- endif %}
       <div class="card hoverable">
         {%- if project.img %}
-        {%- include figure.html
+        {%- include figure.liquid
           path=project.img
           sizes= "250px"
           alt="project thumbnail" -%}

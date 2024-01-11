@@ -37,7 +37,7 @@ The middle image is normalized in order to be visible to human eyes.
 We stress that the perturbation here is carefully chosen as the gradient sign direction $\mathrm{sgn}(\nabla_x J)$.
 
 <figure>
- {% include distill_img.html path="assets/img/WDRobustness/panda2.png" zoomable=true%}
+ {% include distill_img.liquid path="assets/img/WDRobustness/panda2.png" zoomable=true%}
 <figcaption class="caption">A demonstration of adversarial attack via Fast Gradient Sign Method (FGSM) <d-cite key="GSS15"></d-cite>.</figcaption>
 </figure>
 
@@ -179,7 +179,7 @@ In the figure below, we  compare the adversarial accuracy of robust networks on 
 We notice a significant drop of the adversarial accuracy even for those neural networks robust against pointwise threat models.
 
 <figure>
- {% include distill_img.html path="assets/img/WDRobustness/acc_shortfall.jpg" zoomable=true%}
+ {% include distill_img.liquid path="assets/img/WDRobustness/acc_shortfall.jpg" zoomable=true%}
 <figcaption class="caption"> 
 Shortfall of WD-adversarial accuracy on CIFAR-10 with different metrics $l_{\infty}$ (left) and $l_{2}$ (right). We testify our proposed attack on all neural networks from RobustBench <d-cite key="CAS+21"></d-cite>. 
 </figcaption>
@@ -218,7 +218,7 @@ Notably, the bounds provided here is order of magnitude faster to compute than t
 
 
 <figure>
-    {% include distill_img.html path="assets/img/WDRobustness/cifar100_blog.jpg" path2="assets/img/WDRobustness/imagenet_blog.jpg" zoomable=true%}
+    {% include distill_img.liquid path="assets/img/WDRobustness/cifar100_blog.jpg" path2="assets/img/WDRobustness/imagenet_blog.jpg" zoomable=true%}
         <figcaption class="caption"> 
     $\mathcal{R}^{u}$ & $\mathcal{R}^{l}$ versus $\mathcal{R}$ on CIFAR-100 (top) and ImageNet (bottom). 
     </figcaption>

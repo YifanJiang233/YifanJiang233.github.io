@@ -114,6 +114,6 @@ pagination:
     {% endfor %}
   </ul>
 
-  {% include pagination.html %}
+  {% include pagination.liquid %}
 
 </div>

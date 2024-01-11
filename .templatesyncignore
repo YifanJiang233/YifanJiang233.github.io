@@ -1,8 +1,8 @@
 .github/workflows/
 _data/cv.yml
 _data/venues.yml
-_includes/head.html
-_layouts/cv.html
+_includes/head.liquid
+_layouts/cv.liquid
 _bibliography/papers.bib
 _pages/
 _posts/
@@ -10,5 +10,4 @@ _sass/_themes.scss
 _sass/_variables.scss
 assets/img
 assets/pdf
-blog/index.html
 _config.yml
