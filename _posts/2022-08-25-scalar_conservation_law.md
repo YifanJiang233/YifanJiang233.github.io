@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Scalar Conservation Laws with Random Initial Data
-date: 2022-08-25 
+date: 2022-08-25
 description: A talk given at Nonlinear PDE Seminar
-tags: ['scalar conservation law', 'shock wave']
+tags: ["scalar conservation law", "shock wave"]
 categories: talks
 ---
 

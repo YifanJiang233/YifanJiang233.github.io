@@ -1,0 +1,11 @@
+*.min.css
+*.txt
+*.png
+*.jpg
+*.rb
+*.svg
+.*
+*.pdf
+
+assets/css/main.scss
+assets/plotly/demo.html

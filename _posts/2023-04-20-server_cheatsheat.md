@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Remote Server Cheatsheet
-date: 2023-04-20 
+date: 2023-04-20
 description: Cheatsheet of Jupyter, tmux, etc.
-tags: ['python', 'tmux']
+tags: ["python", "tmux"]
 categories: codes
 # toc:
 #     sidebar: left
@@ -61,7 +61,7 @@ Here's how you can configure your own SSH profile to make it easier to connect t
 Tmux is a "terminal multiplexer", it enables a number of terminals (or windows) to be accessed and controlled from a single terminal.
 
 1. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) and [Tmux Resurrect](https://github.com/tmux-plugins/tmux-resurrect).
-2. Start a new session with the name *mysession*.
+2. Start a new session with the name _mysession_.
 
    ```shell
    tmux new -s mysession
@@ -74,7 +74,7 @@ Tmux is a "terminal multiplexer", it enables a number of terminals (or windows) 
    tmux list-session
    ```
 
-5. Kill session *mysession*.
+5. Kill session _mysession_.
 
    ```shell
    tmux kill-session -t mysession

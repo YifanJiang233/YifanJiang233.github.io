@@ -13,15 +13,16 @@ pagination:
   sort_reverse: true
   trail:
     before: 1 # The number of links before the current page
-    after: 3  # The number of links after the current page
+    after: 3 # The number of links after the current page
 ---
 
 <div class="post">
 
-  {% assign blog_name_size = site.blog_name | size %}
-  {% assign blog_description_size = site.blog_description | size %}
+{% assign blog_name_size = site.blog_name | size %}
+{% assign blog_description_size = site.blog_description | size %}
 
-  {% if blog_name_size > 0 or blog_description_size > 0 %}
+{% if blog_name_size > 0 or blog_description_size > 0 %}
+
   <div class="header-bar">
     <h1>{{ site.blog_name }}</h1>
     <h3>{{ site.blog_description }}</h3>
@@ -56,7 +57,9 @@ pagination:
     {% assign categories = post.categories | join: "" %}
 
     <li>
+
 {%- if post.thumbnail -%}
+
 <div class="row">
           <div class="col-sm-9">
 {%- endif -%}
@@ -102,8 +105,11 @@ pagination:
               {% endfor %}
           {% endif %}
     </p>
+
 {%- if post.thumbnail -%}
-    </div>
+
+</div>
+
   <div class="col-sm-3">
     <img class="card-img" src="{{post.thumbnail | relative_url}}" style="object-fit: cover; height: 90%" alt="image">
   </div>
@@ -112,8 +118,9 @@ pagination:
     </li>
 
     {% endfor %}
+
   </ul>
 
-  {% include pagination.liquid %}
+{% include pagination.liquid %}
 
 </div>
