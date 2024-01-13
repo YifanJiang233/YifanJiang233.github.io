@@ -13,19 +13,19 @@ categories: codes
 
 1. Login your remote server.
 
-   ```shell
+   ```ssh
    ssh username@server
    ```
 
 2. Create a remote Jupyter notebook on the server.
 
-   ```shell
+   ```powershell
    jupyter notebook --no-browser --port=8080
    ```
 
    Alternatively, you can define a macro in your configuration file `.bashrc` on the remote server.
 
-   ```shell
+   ```powershell
    function nb(){
        jupyter notebook --no-browser --port=8080
     }
@@ -33,7 +33,7 @@ categories: codes
 
 3. Open a new local terminal and connect to the remote Jupyter notebook
 
-   ```shell
+   ```ssh
    ssh -L 8080:localhost:8080 username@server
    ```
 
@@ -46,7 +46,7 @@ Here's how you can configure your own SSH profile to make it easier to connect t
 
 1. Add the following profile to your `.ssh/config` file.
 
-   ```nginx
+   ```ssh
    Host myhost
        Hostname server
        User username
@@ -63,19 +63,19 @@ Tmux is a "terminal multiplexer", it enables a number of terminals (or windows) 
 1. Install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) and [Tmux Resurrect](https://github.com/tmux-plugins/tmux-resurrect).
 2. Start a new session with the name _mysession_.
 
-   ```shell
+   ```powershell
    tmux new -s mysession
    ```
 
 3. Save a session by `Ctrl-b + Ctrl-s` and restore a session by `Ctrl-b + Crtl-r`.
 4. Show all sessions.
 
-   ```shell
+   ```powershell
    tmux list-session
    ```
 
 5. Kill session _mysession_.
 
-   ```shell
+   ```powershell
    tmux kill-session -t mysession
    ```

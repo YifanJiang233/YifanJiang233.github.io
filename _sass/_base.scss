@@ -911,7 +911,7 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 750ms !important;
+  transition: all 500ms !important;
   transition-delay: 0 !important;
 }
 
@@ -1007,27 +1007,29 @@ figure.highlight {
   margin: 0 0 1rem;
 }
 
+//  Inline code
+code {
+  color: var(--global-text-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 3px;
+  padding: 3px 3px;
+}
+
+// Code blocks
 pre {
-  color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
 
   pre,
   code {
+    color: var(--global-text-color);
     background-color: transparent;
     border-radius: 0;
     margin-bottom: 0;
     border-style: none;
     padding: 0;
   }
-}
-
-code {
-  color: var(--global-theme-color);
-  background-color: var(--global-code-bg-color);
-  border-radius: 3px;
-  padding: 3px 3px;
 }
 
 .code-display-wrapper {
@@ -1042,8 +1044,8 @@ code {
     font-family: monospace;
     opacity: 0;
     position: absolute;
-    right: 0.15rem;
-    top: 0.12rem;
+    right: 0.25rem;
+    top: 0.25rem;
   }
   &:hover .copy {
     color: var(--global-hover-color);
