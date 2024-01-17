@@ -216,6 +216,25 @@ blockquote {
     color: var(--global-text-color);
   }
 
+  .navbar-nav {
+    --underline-wide: 0;
+    --underline-offset-x: 0;
+  }
+  .navbar-nav::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 75%;
+    height: 3px;
+    width: var(--underline-width);
+    transform: translateX(var(--underline-offset-x));
+    background-color: #{$grey-color};
+    opacity: 0.5;
+    transition:
+      transform 0.5s,
+      width 0.5s;
+    border-radius: 3px;
+  }
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
 
