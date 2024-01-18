@@ -12,11 +12,15 @@ function setUnderlineStyles(width, offset) {
 }
 
 function updateUnderlineStyles() {
-  setUnderlineStyles(active_nav_width, active_nav_offset);
+  let navcollapse = document.querySelector(".navbar-collapse");
+  if (!navcollapse.classList.contains("show") & !navcollapse.classList.contains("collapsing")) {
+    setUnderlineStyles(active_nav_width, active_nav_offset);
+  }
 }
 
 function handleNavbarMouseover(event) {
-  if (event.target.classList.contains("nav-link")) {
+  let navcollapse = document.querySelector(".navbar-collapse");
+  if (event.target.classList.contains("nav-link") & !navcollapse.classList.contains("show") & !navcollapse.classList.contains("collapsing")) {
     setUnderlineStyles(event.target.offsetWidth, event.target.offsetLeft);
   }
 }
