@@ -1,6 +1,23 @@
 ---
 ---
 
+@misc{feng24Anytime,
+  title = {The {{Anytime Convergence}} of {{Stochastic Gradient Descent}} with {{Momentum}}: {{From}} a {{Continuous-Time Perspective}}},
+  shorttitle = {The {{Anytime Convergence}} of {{Stochastic Gradient Descent}} with {{Momentum}}},
+  author = {Feng, Yasong and Jiang, Yifan and Wang, Tianyu and Ying, Zhiliang},
+  year = {2024},
+  month = feb,
+  number = {arXiv:2310.19598},
+  eprint = {2310.19598},
+  publisher = {{arXiv}},
+  abstract = {In this paper, we study the stochastic optimization problem from a continuous-time perspective. We propose a stochastic first-order algorithm, called Stochastic Gradient Descent with Momentum (SGDM), and show that the trajectory of SGDM, despite its stochastic nature, converges to a deterministic second-order Ordinary Differential Equation (ODE) in \(L_{2}\)-norm, as the stepsize goes to zero. The connection between the ODE and the algorithm results in delightful patterns in the discrete-time convergence analysis. More specifically, we develop convergence results for the ODE through a Lyapunov function, and translate the whole argument to the discrete-time case. This approach yields a novel anytime convergence guarantee for stochastic gradient methods. Precisely, we prove that, for any \(\beta\), there exists \(k_{0}\) such that the sequence \(\{x_{k}\}\) governed by running SGDM on a smooth convex function \(f\) satisfies
+  \[ 
+    \bbP\Biggl(\mathop{\bigcap}_\{k=k_0\}^\infty \biggl\\{f (x_k) - f^* \leq  \frac\{C\log k \log(2/\beta)\}\{\sqrt\{k\}\}\biggr\\}\Biggr)\geq 1-\beta,\]
+where \(f^*=\min_\{x\in\bbR^n\}f(x)\). Our contribution is significant in that it better captures the convergence behavior across the entire trajectory of the algorithm, rather than at a single iterate.},
+  bibtex_show = {true},
+  arxiv = {2310.19598}
+}
+
 @misc{jiang24Duality,
   title = {Duality of Causal Distributionally Robust Optimization: The Discrete-Time Case},
   shorttitle = {Duality of Causal Distributionally Robust Optimization},

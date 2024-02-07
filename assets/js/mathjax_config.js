@@ -10,6 +10,7 @@ window.MathJax = {
       bR: ["{\\mathbf{R}}"],
       bbR: ["{\\mathbb{R}}"],
       E: ["{\\mathbf{E}}"],
+      bbP: ["{\\mathbb{P}}"],
     },
   },
   svg: {
