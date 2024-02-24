@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://YifanJiang233.github.io/sitemap.xml
